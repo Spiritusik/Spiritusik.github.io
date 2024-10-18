@@ -1,0 +1,128 @@
+@import "mixins";
+@import "variables";
+
+:root {
+  --main-font-color:  #FDFBFB;
+  --main-background-color: #131C20;
+}
+
+html {
+  font-size: calc(10 / 1600 * 100vw);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Great Vibes", sans-serif;
+  color: var(--main-font-color);
+  background-color: var(--main-background-color);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-margin-top: 18.2rem;
+}
+
+
+section {
+  width: 132rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 5.9rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.generate-columns(4);
+.generate-rows(5);
+
+.hero-section {
+  margin-top: 12rem;
+}
+
+.book-section {
+  margin-top: 12rem;
+
+  .swiper {
+    .slide {
+      display: flex;
+      flex-direction: row;
+      gap: 2.4rem;
+
+      .book-page {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 2.4rem;
+
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 40%;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.bip-section {
+  margin-top: 12rem;
+
+  &-image {
+    position: relative;
+    margin-top: 12rem;
+
+    .bip {
+      &-area {
+        position: absolute;
+        top: 21%;
+        left: 38%;
+
+        border-radius: 50%;
+        width: 28%;
+        height: 24%;
+      }
+
+      &-message {
+        position: absolute;
+        top: 12%;
+        left: 47%;
+        opacity: 0;
+
+        text-transform: uppercase;
+        font-family: "Arial", sans-serif;
+        font-size: 8rem;
+
+        transition: opacity 300ms ease;
+        &.show {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

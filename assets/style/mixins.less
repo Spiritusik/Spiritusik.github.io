@@ -1,0 +1,13 @@
+.generate-columns(@count) when (@count > 0) {
+  .grid-column-@{count} {
+    grid-column: span @count;
+  }
+  .generate-columns(@count - 1); // Рекурсивный вызов с уменьшением счетчика
+}
+
+.generate-rows(@count) when (@count > 0) {
+  .grid-row-@{count} {
+    grid-row: span @count;
+  }
+  .generate-rows(@count - 1); // Рекурсивный вызов
+}

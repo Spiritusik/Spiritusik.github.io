@@ -1,0 +1,125 @@
+@import "../fonts/fonts.css";
+@import "reset.css";
+:root {
+  --main-font-color: #FDFBFB;
+  --main-background-color: #131C20;
+}
+html {
+  font-size: calc(10 / 1600 * 100vw);
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Great Vibes", sans-serif;
+  color: var(--main-font-color);
+  background-color: var(--main-background-color);
+}
+* {
+  box-sizing: border-box;
+  scroll-margin-top: 18.2rem;
+}
+section {
+  width: 132rem;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 5.9rem;
+  text-align: center;
+}
+h2 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+h3 {
+  font-size: 3rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.grid-column-4 {
+  grid-column: span 4;
+}
+.grid-column-3 {
+  grid-column: span 3;
+}
+.grid-column-2 {
+  grid-column: span 2;
+}
+.grid-column-1 {
+  grid-column: span 1;
+}
+.grid-row-5 {
+  grid-row: span 5;
+}
+.grid-row-4 {
+  grid-row: span 4;
+}
+.grid-row-3 {
+  grid-row: span 3;
+}
+.grid-row-2 {
+  grid-row: span 2;
+}
+.grid-row-1 {
+  grid-row: span 1;
+}
+.hero-section {
+  margin-top: 12rem;
+}
+.book-section {
+  margin-top: 12rem;
+}
+.book-section .swiper .slide {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+.book-section .swiper .slide .book-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 40%;
+}
+.book-section .swiper .slide .book-page div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bip-section {
+  margin-top: 12rem;
+}
+.bip-section-image {
+  position: relative;
+  margin-top: 12rem;
+}
+.bip-section-image .bip-area {
+  position: absolute;
+  top: 21%;
+  left: 38%;
+  border-radius: 50%;
+  width: 28%;
+  height: 24%;
+}
+.bip-section-image .bip-message {
+  position: absolute;
+  top: 12%;
+  left: 47%;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  font-size: 8rem;
+  transition: opacity 300ms ease;
+}
+.bip-section-image .bip-message.show {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
